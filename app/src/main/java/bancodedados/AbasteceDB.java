@@ -1,39 +1,50 @@
-package br.unigran.provap1;
+package bancodedados;
 
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import androidx.collection.ArraySet;
+
 import java.util.List;
 
-    public class AbasteceDB {
+import br.unigran.provap1.Abastecimento;
 
-        public DBHelper db;
+public class AbasteceDB {
+
+        private DBHelper db;
         private SQLiteDatabase conexao;
+
         public AbasteceDB(DBHelper db) {this.db=db;}
-        public void inserir (Abastecimento abastecimento){
+
+       
+    public void inserir(Abastecimento abastecimento) {
+        conexao = db.getWritableDatabase();//abre o bd
+        ContentValues valores = new ContentValues();
+        valores.put("km", abastecimento.getKm());
+        valores.put("qtdabastecida", abastecimento.getQtdabastecida());
+        valores.put("data", abastecimento.getDiaabastecido());
+        valores.put("Valor", abastecimento.getValor());
+        conexao.insertOrThrow("Lista", null, valores);
+        conexao.close();
+
+        public void atualizar(Abastecimento abastecimento) {
             conexao = db.getWritableDatabase();
             ContentValues valores = new ContentValues();
-            valores.put("km",abastecimento.getKm());
-            valores.put("qtdabastecida",abastecimento.getQtdabastecida());
-            valores.put("diaabastecido",abastecimento.getDiaabastecido());
-            valores.put("valor",abastecimento.getValor());
-
-            conexao.insertOrThrow("Abastecimento",null,valores);
+            valores.put("km", abastecimento.getKm());
+            valores.put("qtdabastecida", abastecimento.getQtdabastecida());
+            valores.put("data", abastecimento.getDiaabastecido());
+            valores.put("Valor", abastecimento.getValor());
+            conexao.update("Lista", valores, "id=?", new String[]{abastecimento.getId().toString()});
             conexao.close();
         }
-
-        public void salvar(Abastecimento abastecimento){
-            conexao = db.getWritableDatabase();//abri o bd
-
-        }
-        public void atualizar(){}
         public void remover(int id){
             conexao=db.getWritableDatabase();
             conexao.delete("Abastecimento","id=?",
                     new String[]{id+""});
         }
-        public void lista(List dados){
+        public void lista(List ArraySet<Object> dados;
+        dados){
             dados.clear();
             conexao=db.getReadableDatabase();
             String names[]={"km","qtdabastecida","diaabastecido","valor"};
@@ -57,5 +68,6 @@ import java.util.List;
             conexao.close();
         }
     }
+
 
 

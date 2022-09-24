@@ -5,4 +5,5 @@
     <item name="diaabastecidoID" type="id" />
     <item name="valorId" type="id" />
     <item name="listaId" type="id" />
+    <item name="textView2" type="id" />
 </resources>

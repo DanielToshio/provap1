@@ -1,4 +1,4 @@
-package br.unigran.provap1;
+package bancodedados;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
