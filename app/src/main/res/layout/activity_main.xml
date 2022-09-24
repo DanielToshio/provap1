@@ -16,9 +16,11 @@
         android:ems="10"
         android:hint="Km Atual"
         android:inputType="number"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/qtdabastecidoId"
@@ -30,6 +32,7 @@
         android:ems="10"
         android:hint="Litros Abastecidos"
         android:inputType="number"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,7 +41,7 @@
     <EditText
         android:id="@+id/valorId"
         android:layout_width="0dp"
-        android:layout_height="44dp"
+        android:layout_height="48dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="8dp"
@@ -52,7 +55,7 @@
     <EditText
         android:id="@+id/dataId"
         android:layout_width="0dp"
-        android:layout_height="44dp"
+        android:layout_height="48dp"
         android:layout_marginStart="23dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="8dp"
@@ -66,38 +69,22 @@
     <Button
         android:id="@+id/Salvar"
         android:layout_width="202dp"
-        android:layout_height="46dp"
+        android:layout_height="48dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="15dp"
         android:text="Salvar"
-        app:layout_constraintEnd_toStartOf="@+id/editarId"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/valorId" />
 
-    <Button
-        android:id="@+id/editarId"
-        android:layout_width="185dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:text="Editar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Salvar"
-        app:layout_constraintTop_toBottomOf="@+id/dataId" />
-
     <ListView
-        android:id="@+id/lista"
+        android:id="@+id/listaId"
         android:layout_width="409dp"
         android:layout_height="447dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editarId" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
