@@ -14,7 +14,7 @@
         android:layout_marginTop="60dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="Km Atual"
+        android:hint="@string/kmatualId"
         android:inputType="number"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,10 +29,12 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="9dp"
         android:layout_marginEnd="8dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Litros Abastecidos"
+        android:hint="@string/litrosabastecidosId"
         android:inputType="number"
         android:minHeight="48dp"
+        android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,11 +48,12 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="Valor"
+        android:hint="@string/valorId"
         android:inputType="number"
         app:layout_constraintEnd_toStartOf="@+id/dataId"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/qtdabastecidoId" />
+        app:layout_constraintTop_toBottomOf="@+id/qtdabastecidoId"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/dataId"
@@ -60,11 +63,12 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="Data"
+        android:hint="@string/dataId"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/valorId"
-        app:layout_constraintTop_toBottomOf="@+id/qtdabastecidoId" />
+        app:layout_constraintTop_toBottomOf="@+id/qtdabastecidoId"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/Salvar"
@@ -72,7 +76,7 @@
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:text="Salvar"
+        android:text="@string/salvar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/valorId" />
 
