@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/km"
+        android:id="@+id/kmId"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextNumber2"
+        android:id="@+id/qtdabastecidoId"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -33,10 +33,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/km" />
+        app:layout_constraintTop_toBottomOf="@+id/kmId" />
 
     <EditText
-        android:id="@+id/editTextNumber3"
+        android:id="@+id/valorId"
         android:layout_width="0dp"
         android:layout_height="44dp"
         android:layout_marginStart="8dp"
@@ -45,12 +45,12 @@
         android:ems="10"
         android:hint="Valor"
         android:inputType="number"
-        app:layout_constraintEnd_toStartOf="@+id/editTextNumber4"
+        app:layout_constraintEnd_toStartOf="@+id/dataId"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
+        app:layout_constraintTop_toBottomOf="@+id/qtdabastecidoId" />
 
     <EditText
-        android:id="@+id/editTextNumber4"
+        android:id="@+id/dataId"
         android:layout_width="0dp"
         android:layout_height="44dp"
         android:layout_marginStart="23dp"
@@ -60,34 +60,35 @@
         android:hint="Data"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editTextNumber3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
+        app:layout_constraintStart_toEndOf="@+id/valorId"
+        app:layout_constraintTop_toBottomOf="@+id/qtdabastecidoId" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/Salvar"
         android:layout_width="202dp"
         android:layout_height="46dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="15dp"
-        android:text="Button"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        android:text="Salvar"
+        app:layout_constraintEnd_toStartOf="@+id/editarId"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber3" />
+        app:layout_constraintTop_toBottomOf="@+id/valorId" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/editarId"
         android:layout_width="185dp"
         android:layout_height="48dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:text="Button"
+        android:text="Editar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber4" />
+        app:layout_constraintStart_toEndOf="@+id/Salvar"
+        app:layout_constraintTop_toBottomOf="@+id/dataId" />
 
     <ListView
+        android:id="@+id/lista"
         android:layout_width="409dp"
         android:layout_height="447dp"
         android:layout_marginStart="1dp"
@@ -97,6 +98,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/editarId" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
