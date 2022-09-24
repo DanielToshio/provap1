@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="kmId" type="id" />
+    <item name="qtdabastecidaId" type="id" />
+    <item name="diaabastecidoID" type="id" />
+    <item name="valorId" type="id" />
+    <item name="listaId" type="id" />
+</resources>
